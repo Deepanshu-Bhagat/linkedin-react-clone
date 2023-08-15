@@ -1,0 +1,217 @@
+.container {
+  grid-area: main;
+}
+
+.commonCard {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  border: none;
+  box-shadow: 0 0 0 1px rgb(0 0 0/15%), 0 0 0 rgb(0 0 0 /20%);
+}
+.shareBox {
+  display: flex;
+  flex-direction: column;
+  color: #958b7b;
+  margin: 0 0 8px;
+  background: white;
+}
+
+.shareBox div:first-child {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 0 16px;
+}
+.shareBox div:first-child img {
+  width: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.shareBox div:first-child button {
+  flex-grow: 1;
+  margin: 4px 0;
+  padding-left: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 35px;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+}
+.shareBox div:first-child button:disabled {
+  pointer-events: none;
+}
+
+.shareBox div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 4px 0;
+}
+.shareBox div:nth-child(2) button img {
+  margin: 0 4px 0 -2px;
+  width: 24px;
+}
+.shareBox div:nth-child(2) button span {
+  color: #70b5f9;
+}
+.shareBox div button {
+  outline: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 48px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.content {
+  text-align: center;
+}
+.spinner {
+  width: 50px;
+  animation: rotate 2.3s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.article {
+  padding: 0;
+  margin: 0 0 8px;
+  overflow: visible;
+}
+.sharedActor {
+  padding-right: 40px;
+  flex-wrap: nowrap;
+  padding: 12px 16px 0;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.sharedActor a {
+  margin-right: 12px;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+}
+.sharedActor a img {
+  width: 48px;
+  height: 48px;
+}
+.sharedActor a > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-left: 8px;
+  overflow: hidden;
+}
+.sharedActor a > div span {
+  text-align: left;
+}
+.sharedActor a > div span:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+}
+.sharedActor a > div span:nth-child(n + 1) {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sharedActor button {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.sharedActor button img {
+  width: 22px;
+}
+
+.description {
+  padding: 0 16px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  text-align: left;
+}
+.sharedImg {
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background-color: #f9fafb;
+}
+.sharedImg img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.socialCounts {
+  display: flex;
+  /* align-items: flex-start; */
+  align-items: center;
+  line-height: 1.3;
+  list-style: none;
+  overflow: auto;
+  max-width: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9e5df;
+}
+.socialCounts li:first-child img {
+  width: 20px;
+  height: 20px;
+}
+.socialCounts li {
+  margin-right: 5px;
+  font-size: 12px;
+}
+.socialCounts li button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: white;
+}
+
+.socialActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: 40px;
+  padding: 4px 8px;
+}
+.socialActions button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+  color: #0a66c2;
+  border: none;
+  background-color: white;
+}
+.socialActions button img {
+  width: 28px;
+}
+
+@media (min-width: 768px) {
+  .socialActions button span {
+    margin-left: 8px;
+  }
+}
